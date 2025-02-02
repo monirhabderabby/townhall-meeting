@@ -2,6 +2,7 @@
 
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useGetData } from "@/hooks/useGetData";
 import useScaleDataStore from "@/hooks/useScaleDataStore";
 
 function getTopSalespeople(data) {
@@ -60,11 +61,14 @@ function getTopSalespeople(data) {
 }
 
 const TopThreeSales = () => {
+  const { isLoading, data } = useGetData(
+    "https://docs.google.com/spreadsheets/d/1JJwQiz_m-h1YQKT1WPVGKRAnLFR9S3GX/edit?gid=1606401702#gid=1606401702"
+  );
   const { jsonData } = useScaleDataStore();
 
   const teams = getTopSalespeople(jsonData);
 
-  console.log(jsonData);
+  console.log(data);
 
   return (
     <Card className="w-full shadow-none">

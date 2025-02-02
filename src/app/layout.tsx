@@ -1,4 +1,5 @@
 import Navbar from "@/components/shared/Navbar";
+import AppProvider from "@/provider/AppProvider";
 import { ThemeProvider } from "@/provider/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -23,17 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}  antialiased bg_gradient`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
+        <AppProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
 
-          {children}
-          <Toaster />
-        </ThemeProvider>
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </AppProvider>
       </body>
     </html>
   );
