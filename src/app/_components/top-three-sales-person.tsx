@@ -64,10 +64,12 @@ const TopThreeSales = () => {
 
   const teams = getTopSalespeople(jsonData);
 
+  console.log(jsonData);
+
   return (
     <Card className="w-full shadow-none">
       <CardHeader>
-        <CardTitle>Team (Sales)</CardTitle>
+        <CardTitle>Top 3 Sales (Person)</CardTitle>
       </CardHeader>
 
       <CardContent>

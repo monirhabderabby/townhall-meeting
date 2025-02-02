@@ -76,3 +76,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.bg_gradient {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0.2049194677871149) 0%,
+    rgba(67, 162, 252, 0.16290266106442575) 100%,
+    rgba(70, 230, 252, 0.008841036414565795) 100%
+  );
+}

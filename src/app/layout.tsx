@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  antialiased`}>
+      <body className={`${inter.className}  antialiased bg_gradient`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,6 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+
           {children}
           <Toaster />
         </ThemeProvider>

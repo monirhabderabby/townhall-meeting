@@ -14,6 +14,7 @@ import { ScaleColumn } from "./column";
 
 const ScaleTableContainer = () => {
   const { jsonData } = useScaleDataStore();
+
   return (
     <div>
       <TableContainer data={jsonData || []} columns={ScaleColumn} />
