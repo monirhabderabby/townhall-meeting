@@ -1,0 +1,27 @@
+export type ScaleDataType = {
+  employeeId: number;
+  employeeName: string;
+  salesDepartment: string;
+  date: number;
+  profileName: string;
+  amount: number;
+  chargesFiverr: number;
+  percentage: number;
+  clientUserId: string;
+  orderNumber: string;
+  orderLink: string;
+  sheetLink: string;
+  assignedTeam: string;
+  orderStatus: string;
+  serviceLine: string;
+  deliveredBy: string;
+  deliveryDate: number;
+  deliveryAmount: number;
+  deliveryLastTime: string;
+  deadline: string;
+  operationsDepartment: string;
+  platformStatus: string;
+  orderSource: string;
+  platformSource: string;
+  odooUpdated: string;
+};
