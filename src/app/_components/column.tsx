@@ -23,7 +23,6 @@ export const ScaleColumn = [
     accessorKey: "Order Status",
     header: "Status",
     cell: ({ row }) => {
-      const data = row.original;
       const isDelivered = row.original["Order Status"] == "Delivered";
 
       return (

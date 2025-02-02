@@ -61,7 +61,7 @@ function getTopSalespeople(data) {
 }
 
 const TopThreeSales = () => {
-  const { isLoading, data } = useGetData(
+  const { data } = useGetData(
     "https://docs.google.com/spreadsheets/d/1JJwQiz_m-h1YQKT1WPVGKRAnLFR9S3GX/edit?gid=1606401702#gid=1606401702"
   );
   const { jsonData } = useScaleDataStore();
